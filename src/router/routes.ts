@@ -12,7 +12,7 @@ const routes: RouteRecordRaw[] = [
 
       {
         path: 'posts',
-        component: () => import('src/pages/PostsPageX.vue'),
+        component: () => import('pages/PostsPage.vue'),
       },
     ],
   },

@@ -7,22 +7,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
+import { defineComponent, onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
 
 import PostsComponent from 'src/components/PostsComponent.vue';
-import { Post } from 'src/components/models';
-import { api } from 'src/boot/axios';
+import { usePostsStore } from 'src/stores/posts';
 
 export default defineComponent({
   name: 'PostPage',
   components: { PostsComponent },
   setup () {
-    const posts = ref<Post[]>([]);
+    const store = usePostsStore();
+    const { posts } = storeToRefs(store);
+    const { getPosts } = store;
 
-    async function getPosts() {
-      const res = await api.get('/posts').catch();
-      posts.value = res.data;
-    }
     onMounted(() => {
       getPosts();
     })

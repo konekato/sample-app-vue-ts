@@ -10,7 +10,7 @@
 import { defineComponent, onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
 
-import PostsComponent from 'src/components/PostsComponent.vue';
+import PostsComponent from 'src/components/organisms/PostsComponent.vue';
 import { usePostsStore } from 'src/stores/posts';
 
 export default defineComponent({

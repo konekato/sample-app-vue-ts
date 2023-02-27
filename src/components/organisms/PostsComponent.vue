@@ -19,7 +19,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 
-import { Post } from './models';
+import { Post } from '../models';
 
 export default defineComponent({
   name: 'PostsComponent',

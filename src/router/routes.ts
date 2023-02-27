@@ -10,9 +10,24 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/IndexPage.vue'),
       },
 
+      // {
+      //   path: 'posts',
+      //   component: () => import('pages/PostsPage.vue'),
+      //   children: [
+      //     {
+      //       path: ':id',
+      //       component: () => import('pages/PostPage.vue'),
+      //     },
+      //   ],
+      // },
+
       {
         path: 'posts',
         component: () => import('pages/PostsPage.vue'),
+      },
+      {
+        path: 'posts/:id',
+        component: () => import('pages/PostPage.vue'),
       },
     ],
   },

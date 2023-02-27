@@ -14,7 +14,7 @@ import PostsComponent from 'src/components/organisms/PostsComponent.vue';
 import { usePostsStore } from 'src/stores/posts';
 
 export default defineComponent({
-  name: 'PostPage',
+  name: 'PostsPage',
   components: { PostsComponent },
   setup () {
     const store = usePostsStore();

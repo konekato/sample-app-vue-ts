@@ -29,6 +29,11 @@ const routes: RouteRecordRaw[] = [
         path: 'posts/:id',
         component: () => import('pages/PostPage.vue'),
       },
+
+      {
+        path: 'photos',
+        component: () => import('pages/PhotosPage.vue'),
+      },
     ],
   },
 

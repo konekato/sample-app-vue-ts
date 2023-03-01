@@ -28,7 +28,7 @@
         <q-item-label
           header
         >
-          Essential Links
+          To
         </q-item-label>
 
         <EssentialLink
@@ -36,9 +36,6 @@
           :key="link.title"
           v-bind="link"
         />
-
-        <router-link to="/">Home</router-link>
-        <router-link to="/posts">Posts</router-link>
       </q-list>
     </q-drawer>
 
@@ -54,47 +51,20 @@ import EssentialLink from 'components/EssentialLink.vue';
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Home',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: '/'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Posts',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: '/posts'
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
+    title: 'Photos',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: '/photos'
   },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
 ];
 
 export default defineComponent({
